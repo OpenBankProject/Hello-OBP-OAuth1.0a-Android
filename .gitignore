@@ -1,2 +1,17 @@
+.classpath
+.gradle
+.idea
+.project
+*.apk
+*.ap_
+*.class
+*.dex
+*.iml
+app/build
 bin
+build
 gen
+obj
+local.properties
+Thumbs.db
+
