@@ -22,16 +22,10 @@ Remove the RuntimeException in OAuthActivity.java that is there to remind you of
 
 ## Login credentials
 
-You will need to login to the OBP Sandbox API (unless you change the API instance) when running the app. This can be done using any the following credentials:
+You will need to login to the OBP Sandbox API (unless you change the API instance) when running the app. 
 
-username: joe.bloggs@example.com
-password: qwerty
+Please see the wiki page of each sandbox for credentials.
 
-username: jane.bloggs@example.com
-password: qwerty
-
-username: john.bloggs@example.com
-password: qwerty
 
 ## LICENSE
 
