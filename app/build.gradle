@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion "23.0.1"
+    compileSdkVersion 26
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         applicationId "com.tesobe.hello_obp"
         minSdkVersion 7
-        targetSdkVersion 19
+        targetSdkVersion 26
     }
 
     buildTypes {
@@ -19,6 +19,6 @@ android {
 }
 
 dependencies {
-    compile(group: 'oauth.signpost', name: 'signpost-core', version: '1.2.1.2')
-    compile(group: 'oauth.signpost', name: 'signpost-commonshttp4', version: '1.2.1.2')
+    implementation(group: 'oauth.signpost', name: 'signpost-core', version: '1.2.1.2')
+    implementation(group: 'oauth.signpost', name: 'signpost-commonshttp4', version: '1.2.1.2')
 }
