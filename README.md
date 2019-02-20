@@ -12,6 +12,7 @@ There are a couple of things you need to do to get this project set up.
 
 Get consumer key / secret:  
 -register your client at  https://apisandbox.openbankproject.com/consumer-registration
+ when create your consumer,"User redirect URL" should be "customAppProtocol:/",customAppProtocol consistent with the following customAppProtocol in strings.xml
 
 -set OBP_AUTH_KEY and OBP_SECRET_KEY in OBPRestClient.java
 
