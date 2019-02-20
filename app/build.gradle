@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion "23.0.1"
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
 
     defaultConfig {
         applicationId "com.tesobe.hello_obp"
-        minSdkVersion 7
-        targetSdkVersion 19
+        minSdkVersion 19
+        targetSdkVersion 26
     }
 
     buildTypes {

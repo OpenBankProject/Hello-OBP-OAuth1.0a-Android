@@ -411,7 +411,8 @@ public class OBPRestClient {
 	 */
 	public static JSONObject getBanksJson() throws ExpiredAccessTokenException,
 			ObpApiCallFailedException {
-		return getOAuthedJson(BASE_URL + "/obp/v1.2/banks");
+		//return getOAuthedJson(BASE_URL + "/obp/v1.2/banks");
+		return getOAuthedJson(BASE_URL + "/obp/v3.1.0/banks");
 	}
 
 }
