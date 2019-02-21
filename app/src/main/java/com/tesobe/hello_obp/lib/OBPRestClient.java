@@ -235,7 +235,9 @@ public class OBPRestClient {
 	private static final String OBP_AUTH_KEY = "FILL_ME_IN";
 	private static final String OBP_SECRET_KEY = "FILL_ME_IN";
 	
-	private static final String BASE_URL = "https://apisandbox.openbankproject.com";
+	//private static final String BASE_URL = "https://apisandbox.openbankproject.com";
+	//HSBC API
+    private static final String BASE_URL="https://openlab.openbankproject.com";
 
 	private static final String REQUEST_TOKEN_URL = calcFullPath("/oauth/initiate");
 	private static final String ACCESS_TOKEN_URL = calcFullPath("/oauth/token");
@@ -413,6 +415,25 @@ public class OBPRestClient {
 			ObpApiCallFailedException {
 		//return getOAuthedJson(BASE_URL + "/obp/v1.2/banks");
 		return getOAuthedJson(BASE_URL + "/obp/v3.1.0/banks");
+	}
+
+	//HSBC API
+	public static JSONObject getAtms() throws ExpiredAccessTokenException,
+			ObpApiCallFailedException {
+		//return getOAuthedJson(BASE_URL + "/obp/v1.2/banks");
+		return getOAuthedJson(BASE_URL + "/obp/v3.1.0/banks/hsbc.01.hk.hsbc/atms");
+	}
+	//HSBC API
+	public static JSONObject getAccounts() throws ExpiredAccessTokenException,
+			ObpApiCallFailedException {
+		//return getOAuthedJson(BASE_URL + "/obp/v1.2/banks");
+		return getOAuthedJson(BASE_URL + "/obp/v3.1.0/banks/hsbc.01.hk.hsbc/accounts");
+	}
+	//HSBC API
+	public static JSONObject getTransacitons() throws ExpiredAccessTokenException,
+			ObpApiCallFailedException {
+		//return getOAuthedJson(BASE_URL + "/obp/v1.2/banks");
+		return getOAuthedJson(BASE_URL + "/obp/v3.1.0/banks/hsbc.01.hk.hsbc/accounts/ACCOUNT_ID/VIEW_ID/transactions");
 	}
 
 }
