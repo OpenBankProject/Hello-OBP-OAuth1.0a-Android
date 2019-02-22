@@ -196,6 +196,9 @@
 
     <string name="app_name">Hello-OBP-Android</string>
     <string name="action_settings">Settings</string>
+    <string name="getAtms">getAtms</string>
+    <string name="getAccounts">getAccounts</string>
+    <string name="getTransacitons">getTransacitons</string>
     <string name="oauth_error">There was a problem communicating with the OBP server. Please try again later.</string>
     <string name="private_accounts_label">Private accounts json:</string>
     <string name="private_accounts_json_loading">Loading…</string>

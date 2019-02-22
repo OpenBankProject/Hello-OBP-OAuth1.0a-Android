@@ -203,6 +203,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
@@ -254,6 +255,51 @@ public class MainActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(final MenuItem item) {
+
+		final MenuItem it=item;
+		new AsyncTask<Void, Void, String>() {
+
+			@Override
+			/**
+			 * @return A String containing the json representing the available banks, or an error message
+			 */
+			protected String doInBackground(Void... params) {
+				try {
+					JSONObject json = null;
+					switch (it.getItemId()) {
+						case R.id.getAtms:
+							json=OBPRestClient.getAtms();
+							break;
+						case R.id.getAccounts:
+							json=OBPRestClient.getAccounts();
+							break;
+						case R.id.getTransacitons:
+							json=OBPRestClient.getTransacitons();
+							break;
+						default:
+							break;
+					}
+					return json.toString();
+				} catch (ExpiredAccessTokenException e) {
+					// login again / re-authenticate
+					redoOAuth();
+					return "";
+				} catch (ObpApiCallFailedException e) {
+					return "Sorry, there was an error!";
+				}
+			}
+
+			@Override
+			protected void onPostExecute(String result) {
+				privateAccountsJsonView.setText(result);
+			}
+		}.execute();
+
+		return super.onOptionsItemSelected(item);
 	}
 
 }

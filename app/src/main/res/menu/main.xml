@@ -198,5 +198,20 @@
         android:orderInCategory="100"
         android:showAsAction="never"
         android:title="@string/action_settings"/>
+    <item
+        android:id="@+id/getAtms"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/getAtms"/>
+    <item
+        android:id="@+id/getAccounts"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/getAccounts"/>
+    <item
+        android:id="@+id/getTransacitons"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/getTransacitons"/>
 
 </menu>
